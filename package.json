@@ -1,0 +1,11 @@
+{
+  "name": "javascript-test",
+  "version": "1.0.0",
+  "description": "Boardgame themed javascript test for a company",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "jstest"
+  },
+  "author": "Puribey",
+  "license": "ISC"
+}

@@ -1,0 +1,150 @@
+/* styles for boardgame wish-list */ 
+
+@import '_variables.scss';
+@import '_mixins.scss';
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300,500,700);
+
+/* General styles */
+
+body {
+	background:$white;
+	font-size:16px;
+	font-family:$montserrat;
+	h1 {
+		font-family:$montserrat;
+		font-size: 3em;
+		font-weight: 300;
+		span {
+			font-weight:700;
+		}
+	}
+	.columns {
+		margin:0;
+	}
+	
+}
+
+.banner {
+	background-image: url('../images/dice-bg.jpg');
+	background-size: 100%;
+	text-align: left;
+	div {
+		padding: 80px 0px 80px 50px;
+		color: $white;
+		p {
+			font-size: 1.5em;
+		}
+	}
+}
+
+
+/* item section */
+
+.column-container {
+	position: relative;
+	.content {
+		width:100%;
+		min-height:500px;
+		position:absolute;
+		margin: 0px;
+		padding: 20px;
+		left:0;
+		top:0;
+	}
+	.block {
+		background-color:$white;
+		border: 2px solid $first-color;
+		margin-bottom:10px;
+		width:100%;
+		color:#000;
+		display: flex;
+		flex-direction:row;
+		align-items: center;
+		justify-content: space-between;
+		text-align: center;
+		.item-img{
+			width:350px;
+			position:relative;
+			margin-bottom:-6px;
+			.imageUpload {
+			    display: none;
+			}
+			.itemImage {
+			    cursor: pointer;
+			}
+		}
+		.item-about{
+			width: 100%;
+			text-align: left;
+			padding:30px;
+			.h3-input {
+				font-size: 1.8em;
+				font-weight: 500;
+				border:0;
+				padding:0;
+				width:100%;
+			}
+			textarea {
+				border:0;
+				width: 100%;
+				word-wrap: break-word;
+				word-break: break-word;
+				font-size: 1em;
+				font-weight: 500;
+				background-color:$white;
+				color: $second-text;
+				resize: none;
+			}
+			.btn-edit {@include btn-color($second-color);}
+			.btn-save {@include btn-color($first-color);}
+			.btn-delete {@include btn-color($first-text);}
+		}
+
+	}
+	.block-placeholder {
+		height: 200px;
+		border:1px dotted black;
+		margin-bottom:10px;
+		width:100%;
+	}
+}
+
+
+/* media queries */ 
+
+@media screen and (max-width: 980px){
+	.banner {
+		background-size: cover;
+		text-align: center;
+		div {
+			background-color: rgba(0,0,0,0.3);
+			padding:60px 15px;
+			h1 {
+				line-height: 1em;
+			}
+			p {
+				padding-top: 10px;
+				line-height: 1em;
+			}
+		}
+	}
+	.column-container {
+		.block {
+			flex-direction:column;
+			padding-top:30px;
+			.item-about {
+				text-align:center;
+				input {
+					text-align:center;
+				}
+				textarea {
+					text-align:center;
+				}
+			}
+		}
+	}
+
+}
+
+
+
