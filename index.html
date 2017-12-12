@@ -6,6 +6,7 @@
 	<title>JavaScript Test</title>
 	<link rel="stylesheet" type="text/css" href="public/css/style.css">
 	<link rel="stylesheet" type="text/css" href="resources/bulma/css/bulma.css">
+	<script type="text/javascript" src="resources/taffy-min.js"></script>
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
@@ -16,38 +17,54 @@
 				<div>
 					<h1>Welcome to <span>Boardgame Wishlist!<span></h1>
 					<p>The place to store all the boardgames you wish you could have</p>
+					<a class="btn-open-modal " data-popup-open="popup-1" href="#">New game</a>
 				</div>
 			</div>
 		</div>
-		<section class="container column-container" id="wishlist-container">
-			<div class="columns is-mobile">
-				<div class="column content">
-						<div class="block">
-							<div class="item-img" id="img-1"><img class="itemImage" src="public/images/sushi-go-party.jpg" /><input class="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-							</div>
-							<div class="item-about">
-								<h3><input type="text" value="Sushi Go Party!" class="h3-input" disabled></h3>
-								<textarea name="text" value="item-description" maxlength="300" rows="4" cols="50" disabled>Sushi Go Party!, an expanded version of the best-selling card game Sushi Go!, is a party platter of mega maki, super sashimi, and endless edamame. You still earn points by picking winning sushi combos, but now you can customize each game by choosing à la carte from a menu of more than twenty delectable dishes. What's more, up to eight players can join in on the sushi-feast. Let the good times roll!</textarea>
-								<button class="btn-edit">Edit</button>
-								<button class="btn-save">Save</button>
-								<button class="btn-delete">Delete</button>
-							</div>
-						</div>
-						<div class="block">
-							<div class="item-img" id="img-1"><img class="itemImage" src="public/images/sushi-go-party.jpg" /><input class="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-							</div>
-							<div class="item-about">
-								<h3><input type="text" value="Dixit" class="h3-input" disabled></h3>
-								<textarea name="text" value="item-description" maxlength="300" rows="4" cols="50"  disabled>Each turn one player is the storyteller. This player secretly chooses one card in his hand, then gives a word or sentence to describe this card—but not too obviously. Each other player chooses a card in hand that matches this word/sentence and gives it to the storyteller. The storyteller then lays out the cards, and all other players vote on which card belongs to the storyteller. </textarea>
-								<button class="btn-edit">Edit</button>
-								<button class="btn-save">Save</button>
-								<button class="btn-delete">Delete</button>
-							</div>
-						</div>
+
+		<!-- The Modal -->
+		<div class="popup" data-popup="popup-1">
+		    <div class="popup-inner">
+		        <form>
+    				<h2>Add new boardgames to your list!</h1>
+    				<img src="" class="">
+    				<input class="img-new" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+    				<input type="text" value="" class="name-item" placeholder="Boardgame name">
+    				
+    			
+    				<textarea name="text" value="item-description" maxlength="300" rows="5" cols="50" placeholder="Game description..."></textarea>
+    				<button>Add</button>
+    			</form>
+		        <p><a data-popup-close="popup-1" href="#"></a></p>
+		        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+		    </div>
+		</div>
+
+
+		<!-- 
+		<section class="new-add">
+			<form>
+				<h2>Add new boardgames to your list!</h1>
+				<input type="text" value="" class="name-item" placeholder="Boardgame name">
+				<img src="" class="">
+				<input class="img-new" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+			
+				<textarea name="text" value="item-description" maxlength="300" rows="5" cols="50" placeholder="Game description..."></textarea>
+				<button>Add</button>
+			</form>
+		</section> -->
+		<section class="whishlist-container">
+			<div class="container column-container">
+				<div class="columns is-mobile">
+					<div class="column content" id="wishlist">
+							
+					</div>
 				</div>
 			</div>
 		</section>
 	</div>
+	
+
 	<script type="text/javascript" src="public/js/main.js"></script>
 </body>
 </html>
