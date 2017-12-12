@@ -1,6 +1,4 @@
-// drag and drop 
 
-console.log("hola");
 
 $(document).ready(function(){
 
