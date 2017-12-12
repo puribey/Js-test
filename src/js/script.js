@@ -15,12 +15,14 @@ $(document).ready(function(){
 
 // Changes images 
 
-	$('.itemImage').click(function(e) {
-    	$(this).click();
+	$("#profileImage").click(function(e) {
+    	$("#imageUpload").click();
 	});
-	$('.imageUpload').change(function(){
-    fasterPreview( this );
+
+	$("#imageUpload").change(function(){
+    	fasterPreview( this );
 	});
+
 
 // Delete elements 
 	
@@ -34,6 +36,7 @@ $(document).ready(function(){
 	$('.btn-edit').on('click',function(){
 		var btnEdit =  $(this).data("edit");
 		$('textarea').prop("disabled",true);
+		$('input').prop("disabled",true)
 		$(btnEdit).prop("disabled",false);
 	});
 
@@ -63,7 +66,7 @@ $(function() {
 
 function fasterPreview( uploader ) {
     if ( uploader.files && uploader.files[0] ){
-          $('.itemImage').attr('src', 
+          $('#profileImage').attr('src', 
              window.URL.createObjectURL(uploader.files[0]) );
     }
 }
