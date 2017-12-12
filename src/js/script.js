@@ -15,11 +15,11 @@ $(document).ready(function(){
 
 // Changes images 
 
-	$("#profileImage").click(function(e) {
-    	$("#imageUpload").click();
+	$(".profileImage").click(function(e) {
+    	$(this).closest(".block").find(".imageUpload").click();
 	});
 
-	$("#imageUpload").change(function(){
+	$(".imageUpload").change(function(){
     	fasterPreview( this );
 	});
 
@@ -33,8 +33,9 @@ $(document).ready(function(){
 
 // Edit elements
 
-	$('.btn-edit').on('click',function(){
+	$('.btn-edit').on('click',function(e){
 		var btnEdit =  $(this).data("edit");
+
 		$('textarea').prop("disabled",true);
 		$('input').prop("disabled",true)
 		$(btnEdit).prop("disabled",false);
@@ -66,7 +67,7 @@ $(function() {
 
 function fasterPreview( uploader ) {
     if ( uploader.files && uploader.files[0] ){
-          $('#profileImage').attr('src', 
+    	$(uploader).closest(".block").find('img').attr('src', 
              window.URL.createObjectURL(uploader.files[0]) );
     }
 }
