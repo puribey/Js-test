@@ -21,6 +21,7 @@ body {
 	.columns {
 		margin:0;
 	}
+
 }
 
 
@@ -242,8 +243,14 @@ body {
 					resize: none;
 					overflow: auto;
 					overflow-y: hidden;
+					&:valid {
+						border: 1px solid $second-color;
+					}
 				}
+			
+
 				.btn-edit {@include btn-color($dark-first-color);}
+
 				.btn-save {@include btn-color($first-color);}
 				.btn-delete {@include btn-color($first-text);}
 			}

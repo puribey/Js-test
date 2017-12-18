@@ -211,6 +211,8 @@ body {
           resize: none;
           overflow: auto;
           overflow-y: hidden; }
+          .whishlist-container .column-container .block .item-about textarea:valid {
+            border: 1px solid #E040FB; }
         .whishlist-container .column-container .block .item-about .btn-edit {
           background-color: #689F38;
           color: #fff;

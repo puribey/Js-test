@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="resources/bulma/css/bulma.css">
 	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ 	<script type="text/javascript" src="resources/jquery.maxlength.js"></script>
 </head>
 <body>
 	<div class="container-fluid" id="main-container">
@@ -27,32 +28,19 @@
 		    <div class="popup-inner">
 		        <form id="newItem">
     				<h2>Add new boardgames to your list!</h1>
-    				<img src="" class="">
-    				<input class="img-new" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-    				<input type="text" value="" class="name-item" placeholder="Boardgame name">
+    				<input class="img-new" type="file" name="profile_photo" placeholder="Photo" required="" capture disabled>
+    				<input type="text" value="" id="game" class="name-item" placeholder="Boardgame name">
     				
     			
-    				<textarea name="text" value="item-description" maxlength="300" rows="5" cols="50" placeholder="Game description..."></textarea>
-    				<button>Add</button>
+    				<textarea name="text" id="desc" value="item-description" maxlength="300" rows="5" cols="50" placeholder="Game description..."></textarea>
+    				<button id="save">Add</button>
     			</form>
 		        <p><a data-popup-close="popup-1" href="#"></a></p>
 		        <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
 		    </div>
 		</div>
 
-
-		<!-- 
-		<section class="new-add">
-			<form>
-				<h2>Add new boardgames to your list!</h1>
-				<input type="text" value="" class="name-item" placeholder="Boardgame name">
-				<img src="" class="">
-				<input class="img-new" type="file" name="profile_photo" placeholder="Photo" required="" capture>
-			
-				<textarea name="text" value="item-description" maxlength="300" rows="5" cols="50" placeholder="Game description..."></textarea>
-				<button>Add</button>
-			</form>
-		</section> -->
+		<!-- Game list --> 
 		<section class="whishlist-container">
 			<div class="container column-container">
 				<div class="columns is-mobile">
