@@ -1,6 +1,5 @@
-# My Boardgame Wishlist
+# 2017 My Boardgame Wishlist
 
-----
 ## A few comments before we start
 > This single web app was made for a challenge. I know it's not perfect and you may find a lot of mistakes. That's why, if you are just interested in using it, you should know there are many things to be improved. Please, feel free to fork it and add new magic to it. Take into account I'm a Junior and everything you can add to it will be of great help for my future practice. 
 
